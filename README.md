@@ -90,10 +90,59 @@ This categorisation was used to group people by possible common characteristics 
 
 The txt file contains a broader description of the groups, while the Python script is the one that actually combines the datasets of the selected users: the sequence of the users is randomly shuffled and each user is assigned to a month. To do that, each timestamp in the user's db is modified in its date but not in its hour.
 
-## 6-1. RAW dataset creation:
+## 6-1. RAW dataset creation
 
 With this script, the dataset is completed with the insertion of people and pictures, but not objects. 
 
 People are added randomly and with a random quantity to all the contexts where the user has responded to the "who" question with an answer different than "alone". The operations produces a "participants" dataset with pairs (contextID, personID)
 
 Tags about random locations, people and events are added to pictures following a predefined probability distribution.
+
+## 6-2. Parsed dataset creation
+
+The parsed dataset is a little more structured in the Knowledge Graph it outputs.
+
+### locations
+
+In this dataset, the locations are combined, to create for example only a unique entity for the "home" name, instead of hundreds.
+
+The script creates a new list of "known locations", where it adds the parsed locations by giving them an ID. Such ID will replace all the fields about the location in the context table.
+
+The contexts are split by their values for the "where" data entry.
+- for home, relatives home, and work, only the most common value = mode for the coordinates is picked and saved as the new location.
+- for labelled places, so those locations with a retrieved name (eg "Polo Ferrari") the most common value for the coordinates is picked and saved.
+- for unlabelled places, where there's no specific name, the script groups them by their values in the 6 description columns and only the one element for each group is saved to the list
+
+Once the list is created, the output is split into two files, the first one containing the contexts, each with a link to up to one entity. The second file contains instead the list of the locations.
+
+### participants
+
+The idea here is to assign always the same set of people based on the response to the question "who" given by the user.
+
+We extract randomly from the set of people:
+- n. 1 as the user's partner
+- n. 1 as the user's mother
+- n. 1 as the user's father
+- n. 5 as the user's roommates
+- n. 29 classmates
+- n. 46 friends
+- n. 13 work colleagues
+- the remaining as 'others'
+
+Then, based on the response given by the user, a subset of the people of the correct group is associated to both the context and the event by creating a tuple (contextID, eventID, personID, role, mood) in the participant file.
+
+### objects
+
+Objects are pseudo-randomly assigned to the contexts based on the "activity" field of the event, associated with an action. This is just a proof-of-concept for the assignment, so very few objects and possibility actions are available.
+
+### pictures
+
+With the last version of my ETG, the pictures are characterised with two lists, one for entities and one for concepts (UKC). Therefore, locations/events/people entities are randomly assigned to the pictures according to some probability in an array.
+
+> Right now this assignment is not yet supported by the Ontology, so the alignment of the picture dataset cannot be done with karmalinker. (at least, I was not able to do it directly and I did not spend too much time on it, I just created the JSON-LD version of the picture dataset myself to use it in my application).
+
+### life-sequences
+
+the small 6.2.b script can be used to create a sample life-sequence of contexts by grouping a set of contexts from the contexts file.
+
+> Note: I still have to upload the latest version of the 6.2 script.
