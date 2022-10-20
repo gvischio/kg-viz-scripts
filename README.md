@@ -62,3 +62,15 @@ Then arrives the association process with the label provided by the user in the 
 2. I create a DataFrame containing the extracted columns (class, name) from the POI
 3. For selected values (Home, Work, ...), nothing is performed and the category is set accordingly
 4. For all the remaining values, the DataFrame is filtered according the associations to pick only the values from the "correct categories", then the most common one = the mode is picked and used as the name of the place
+
+## 4. Generated datasets
+
+In the requirements of my work there was the goal of adding people, pictures and objects to the Knowledge Graph.
+
+The people dataset was created by using the free service provided by Mockaroo, which enabled me to specify the data fields I wanted to generate.
+
+The first script (a) can be used to create a dataset of images taken by unspalsh.com. A category can also be specified to reduce the range of possible images. I've used this script three times to generate three datasets for people, events and locations.
+
+The second script (b) instead can be used to create the dataset for the profile pictures of the people.
+
+The object dataset was instead created manually by adding a few objects and a link to an image to represent it.
