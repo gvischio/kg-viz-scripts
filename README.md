@@ -74,3 +74,18 @@ The first script (a) can be used to create a dataset of images taken by unspalsh
 The second script (b) instead can be used to create the dataset for the profile pictures of the people.
 
 The object dataset was instead created manually by adding a few objects and a link to an image to represent it.
+
+## 5. User combination
+
+We wanted to create year-long datasets and not only one-mont-long datasets.
+
+To achieve this, I've combined 12 users into a single dataset, producing in this way 11 datasets.
+
+The Jupyter notebook was used to create the data for the combination. I've looked at the values for the locations "Home" and "relatives home" to combine users by location similarity. Since all the users are students at the University of Trento, we can split the students into 3 categories:
+- "fuorisede" = those who are coming from outside the region (usually >1.5 hour) and who usually have an apartment in Trento to live in during the lectures period
+- "pendolari" = "commuters" = those who live quite near Trento and commute daily to the university.
+- Trento residents, who do not have to commute since they live within 30 minutes of the uni.
+
+This categorisation was used to group people by possible common characteristics and daily patterns. In theory, this will make the year-long dataset more consistet.
+
+The txt file contains a broader description of the groups, while the Python script is the one that actually combines the datasets of the selected users: the sequence of the users is randomly shuffled and each user is assigned to a month. To do that, each timestamp in the user's db is modified in its date but not in its hour
