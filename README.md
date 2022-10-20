@@ -88,4 +88,12 @@ The Jupyter notebook was used to create the data for the combination. I've looke
 
 This categorisation was used to group people by possible common characteristics and daily patterns. In theory, this will make the year-long dataset more consistet.
 
-The txt file contains a broader description of the groups, while the Python script is the one that actually combines the datasets of the selected users: the sequence of the users is randomly shuffled and each user is assigned to a month. To do that, each timestamp in the user's db is modified in its date but not in its hour
+The txt file contains a broader description of the groups, while the Python script is the one that actually combines the datasets of the selected users: the sequence of the users is randomly shuffled and each user is assigned to a month. To do that, each timestamp in the user's db is modified in its date but not in its hour.
+
+## 6-1. RAW dataset creation:
+
+With this script, the dataset is completed with the insertion of people and pictures, but not objects. 
+
+People are added randomly and with a random quantity to all the contexts where the user has responded to the "who" question with an answer different than "alone". The operations produces a "participants" dataset with pairs (contextID, personID)
+
+Tags about random locations, people and events are added to pictures following a predefined probability distribution.
