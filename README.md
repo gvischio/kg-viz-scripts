@@ -144,5 +144,3 @@ With the last version of my ETG, the pictures are characterised with two lists, 
 ### life-sequences
 
 the small 6.2.b script can be used to create a sample life-sequence of contexts by grouping a set of contexts from the contexts file.
-
-> Note: I still have to upload the latest version of the 6.2 script.
