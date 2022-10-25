@@ -1,0 +1,858 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knowdive.disi.it/KGviz"
+     xml:base="http://knowdive.disi.it/KGviz"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:etype="http://knowdive.disi.unitn.it/etype#">
+    <owl:Ontology rdf:about="http://knowdive.disi.it/KGviz">
+        <owl:versionIRI rdf:resource="http://knowdive.disi.it/KGviz/1.0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#GID -->
+
+    <owl:AnnotationProperty rdf:about="http://knowdive.disi.unitn.it/etype#GID"/>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#hasIdProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://knowdive.disi.unitn.it/etype#hasIdProperty"/>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#hasUnitOfMeasure -->
+
+    <owl:AnnotationProperty rdf:about="http://knowdive.disi.unitn.it/etype#hasUnitOfMeasure">
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#concept"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#isEtype -->
+
+    <owl:AnnotationProperty rdf:about="http://knowdive.disi.unitn.it/etype#isEtype"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#concept -->
+
+    <rdfs:Datatype rdf:about="http://knowdive.disi.unitn.it/etype#concept"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#action_props -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#action_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_action -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_action">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_event -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_event">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_function -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_function">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_location -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_location">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_me -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_me">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Me"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_mood -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_mood">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#HumanState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_object -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_object">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#c_person -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#c_person">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#contains -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#contains">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#lifeseq_prop"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#LifeSequence"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#context_prop -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#context_prop"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#entity -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#entity">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#picture_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Picture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#event_props -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#event_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#function_props -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#function_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#lifeseq_prop -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#lifeseq_prop"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#located -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#located">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#event_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Event"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#of_human -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#of_human">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#state_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#HumanState"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#participant -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#participant">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#event_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Event"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#picture_props -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#picture_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#state_props -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#state_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#subject -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#subject">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#action_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Action"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#target -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#target">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#action_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Action"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/rel#targetF -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.it/KGviz/rel#targetF">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/rel#function_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Function"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.it/KGviz/etype#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/action#action_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/action#action_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/action#value -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/action#value">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/action#action_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Action"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/context#category -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/context#category">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/context#context_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/context#context_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/context#context_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/context#end_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/context#end_time">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/context#context_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/context#name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/context#name">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/context#context_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/context#start_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/context#start_time">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/context#context_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Context"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/event#activity -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/event#activity">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/event#event_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/event#end_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/event#end_time">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/event#event_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/event#event_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/event#event_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/event#start_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/event#start_time">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/event#event_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/function#function_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/function#function_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/function#lifeseq_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/function#lifeseq_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/function#value -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/function#value">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/function#function_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Function"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#dateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#dateOfBirth">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#height -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#height">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#human_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#name">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#occupation -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#occupation">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#profilePic -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#profilePic">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#sex -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#sex">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#surname -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#surname">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/human#weight -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/human#weight">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/human#human_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/lifeseq#category -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/lifeseq#category">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/function#lifeseq_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#LifeSequence"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/lifeseq#description -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/lifeseq#description">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/function#lifeseq_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#LifeSequence"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/lifeseq#end_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/lifeseq#end_time">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/action#action_props"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/lifeseq#name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/lifeseq#name">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/function#lifeseq_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#LifeSequence"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/lifeseq#start_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/lifeseq#start_time">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/action#action_props"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#altitude -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#altitude">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#category -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#category">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#city -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#city">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#label -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#label">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#location_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#region -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#region">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/location#suburb -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/location#suburb">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/location#location_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/object#description -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/object#description">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/object#object_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Object"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/object#imageUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/object#imageUrl">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/object#object_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Object"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/object#name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/object#name">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/object#object_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Object"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/object#object_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/object#object_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/picture#concept -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/picture#concept">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/picture#picture_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Picture"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/picture#description -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/picture#description">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/picture#picture_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Picture"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/picture#picture_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/picture#picture_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/picture#url -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/picture#url">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/picture#picture_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#Picture"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/state#degree -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/state#degree">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/state#state_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#HumanState"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/state#key -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/state#key">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/state#state_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#HumanState"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/state#state_props -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/state#state_props"/>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/d/state#type -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.it/KGviz/d/state#type">
+        <rdfs:subPropertyOf rdf:resource="http://knowdive.disi.it/KGviz/d/state#state_props"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.it/KGviz/etype#HumanState"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Action -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Action">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Context -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Context">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Event -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Event">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Function -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Function">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Human -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Human">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.it/KGviz/etype#Thing"/>
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#HumanState -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#HumanState">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#LifeSequence -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#LifeSequence">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Location -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Location">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Me -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Me">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Object -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Object">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.it/KGviz/etype#Thing"/>
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Person -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Person">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.it/KGviz/etype#Human"/>
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Picture -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Picture">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.it/KGviz/etype#Thing -->
+
+    <owl:Class rdf:about="http://knowdive.disi.it/KGviz/etype#Thing">
+        <etype:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</etype:isEtype>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://knowdive.disi.unitn.it/etype#IdentifyingSet_IS1-102">
+        <etype:hasIdProperty>Name_GID-2</etype:hasIdProperty>
+        <etype:hasIdProperty>Electronic_mail_GID-33745</etype:hasIdProperty>
+        <etype:hasIdProperty>Class_GID-43482</etype:hasIdProperty>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://knowdive.disi.unitn.it/etype#IdentifyingSet_IS1-103">
+        <etype:hasIdProperty>Name_GID-2</etype:hasIdProperty>
+        <etype:hasIdProperty>Part_meronym_GID-22</etype:hasIdProperty>
+        <etype:hasIdProperty>Latitude_GID-46263</etype:hasIdProperty>
+        <etype:hasIdProperty>Longitude_GID-46270</etype:hasIdProperty>
+        <etype:hasIdProperty>Class_GID-43482</etype:hasIdProperty>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://knowdive.disi.unitn.it/etype#IdentifyingSet_IS1-104">
+        <etype:hasIdProperty>End_GID-81330</etype:hasIdProperty>
+        <etype:hasIdProperty>Name_GID-2</etype:hasIdProperty>
+        <etype:hasIdProperty>Class_GID-43482</etype:hasIdProperty>
+        <etype:hasIdProperty>Beginning_GID-81324</etype:hasIdProperty>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://knowdive.disi.unitn.it/etype#IdentifyingSet_IS1-105">
+        <etype:hasIdProperty>Name_GID-2</etype:hasIdProperty>
+        <etype:hasIdProperty>Location_GID-132</etype:hasIdProperty>
+        <etype:hasIdProperty>Class_GID-43482</etype:hasIdProperty>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
