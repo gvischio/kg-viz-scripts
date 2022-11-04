@@ -1,0 +1,1441 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix etype: <http://knowdive.disi.unitn.it/etype#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix karma: <http://isi.edu/integration/karma/ontologies/model/current#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1gbd87ljkx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "context_event--xyz.csv" ;
+	km-dev:modelPublicationTime "1661523449460"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"mood\"}],[{\"columnName\":\"locationID\"}],[{\"columnName\":\"contextID\"}],[{\"columnName\":\"userid\"}],[{\"columnName\":\"date\"}],[{\"columnName\":\"date_end\"}],[{\"columnName\":\"eventID\"}],[{\"columnName\":\"what\"}],[{\"columnName\":\"moodID\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"mood\"}],[{\"columnName\":\"c_date\"}],[{\"columnName\":\"locationID\"}],[{\"columnName\":\"contextID\"}],[{\"columnName\":\"userid\"}],[{\"columnName\":\"c_date_end\"}],[{\"columnName\":\"date\"}],[{\"columnName\":\"date_end\"}],[{\"columnName\":\"eventID\"}],[{\"columnName\":\"what\"}],[{\"columnName\":\"moodID\"}]]" ;
+	km-dev:hasModelLabel "context_event--xyz.csv" ;
+	km-dev:hasBaseURI "http://kg-viz/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"date\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"c_date\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"date\\\")\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"date\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"c_date\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"date_end\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"c_date_end\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"date_end\\\")\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"date_end\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"c_date_end\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"properties\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://kg-viz/\",
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"properties\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://kg-viz/\",
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"userid\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Me\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Me1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Me\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Me1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Me/Me1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"userid\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"userid\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"date\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Event\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Event1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/event#start_time\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Event/Event1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"date\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"date\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"c_date\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Context\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Context1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/context#start_time\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Context/Context1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"c_date\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"c_date\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"date_end\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Event\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Event1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/event#end_time\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Event/Event1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"date_end\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"date_end\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"c_date_end\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Context\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Context1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/context#end_time\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Context/Context1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"c_date_end\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"c_date_end\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"what\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Event\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Event1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/event#activity\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Event/Event1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"what\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"what\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"eventID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Event\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Event1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Event\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Event1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Event/Event1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"eventID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"eventID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"moodID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#HumanState\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#HumanState1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#HumanState\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#HumanState1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#HumanState/HumanState1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"moodID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"moodID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"locationID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Location\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Location1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"locationID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"locationID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"contextID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Context\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Context1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Context\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Context1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Context/Context1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"contextID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"contextID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"mood\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#HumanState\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#HumanState1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/state#degree\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#HumanState/HumanState1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"mood\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"mood\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.it/KGviz/etype#Me1\",
+                    \"edgeId\": \"http://knowdive.disi.it/KGviz/rel#c_me\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.it/KGviz/etype#Me\",
+                    \"edgeSourceId\": \"http://knowdive.disi.it/KGviz/etype#Context1\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.it/KGviz/etype#Context\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.it/KGviz/etype#Event1\",
+                    \"edgeId\": \"http://knowdive.disi.it/KGviz/rel#c_event\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.it/KGviz/etype#Event\",
+                    \"edgeSourceId\": \"http://knowdive.disi.it/KGviz/etype#Context1\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.it/KGviz/etype#Context\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.it/KGviz/etype#HumanState1\",
+                    \"edgeId\": \"http://knowdive.disi.it/KGviz/rel#c_mood\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.it/KGviz/etype#HumanState\",
+                    \"edgeSourceId\": \"http://knowdive.disi.it/KGviz/etype#Context1\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.it/KGviz/etype#Context\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"edgeId\": \"http://knowdive.disi.it/KGviz/rel#c_location\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"edgeSourceId\": \"http://knowdive.disi.it/KGviz/etype#Context1\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.it/KGviz/etype#Context\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.it/KGviz/etype#Me1\",
+                    \"edgeId\": \"http://knowdive.disi.it/KGviz/rel#of_human\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.it/KGviz/etype#Me\",
+                    \"edgeSourceId\": \"http://knowdive.disi.it/KGviz/etype#HumanState1\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.it/KGviz/etype#HumanState\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"edgeId\": \"http://knowdive.disi.it/KGviz/rel#located\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"edgeSourceId\": \"http://knowdive.disi.it/KGviz/etype#Event1\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.it/KGviz/etype#Event\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd a rr:TriplesMap .
+
+_:node1gbd87ljkx1 km-dev:hasTriplesMap km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx2 rr:tableName "context_event--xyz.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasLogicalTable _:node1gbd87ljkx2 .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd rr:logicalTable _:node1gbd87ljkx2 ;
+	rr:subjectMap _:node1gbd87ljkx3 .
+
+_:node1gbd87ljkx1 km-dev:hasSubjectMap _:node1gbd87ljkx3 .
+
+_:node1gbd87ljkx3 km-dev:isPartOfMapping _:node1gbd87ljkx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.it/KGviz/etype#Context1" ;
+	rr:class <http://knowdive.disi.it/KGviz/etype#Context> ;
+	rr:template "{contextID}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_73f222cc-6249-41be-a5c2-4105ddb77432 rr:predicate <http://knowdive.disi.it/KGviz/rel#c_event> .
+
+km-dev:RefObjectMap_b1baad19-cd35-4921-af4d-ffa380dd11c8 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap km-dev:RefObjectMap_b1baad19-cd35-4921-af4d-ffa380dd11c8 .
+
+km-dev:PredicateObjectMap_73f222cc-6249-41be-a5c2-4105ddb77432 rr:objectMap km-dev:RefObjectMap_b1baad19-cd35-4921-af4d-ffa380dd11c8 .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd rr:predicateObjectMap km-dev:PredicateObjectMap_73f222cc-6249-41be-a5c2-4105ddb77432 .
+
+km-dev:PredicateObjectMap_73f222cc-6249-41be-a5c2-4105ddb77432 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_73f222cc-6249-41be-a5c2-4105ddb77432 .
+
+km-dev:PredicateObjectMap_43624ef9-702c-435d-8a33-ef7060324c59 rr:predicate <http://knowdive.disi.it/KGviz/rel#c_mood> .
+
+km-dev:RefObjectMap_8781cae3-1ed7-4f51-8363-b29bfdf97bc4 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_aa7f7f61-4ad5-4995-8b40-d5f3914d0535 ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap km-dev:RefObjectMap_8781cae3-1ed7-4f51-8363-b29bfdf97bc4 .
+
+km-dev:PredicateObjectMap_43624ef9-702c-435d-8a33-ef7060324c59 rr:objectMap km-dev:RefObjectMap_8781cae3-1ed7-4f51-8363-b29bfdf97bc4 .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd rr:predicateObjectMap km-dev:PredicateObjectMap_43624ef9-702c-435d-8a33-ef7060324c59 .
+
+km-dev:PredicateObjectMap_43624ef9-702c-435d-8a33-ef7060324c59 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_43624ef9-702c-435d-8a33-ef7060324c59 .
+
+km-dev:PredicateObjectMap_b15e1a56-36ee-4bac-b4af-939f08e66790 rr:predicate <http://knowdive.disi.it/KGviz/d/context#start_time> .
+
+_:node1gbd87ljkx4 rr:column "date" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap _:node1gbd87ljkx4 .
+
+km-dev:PredicateObjectMap_b15e1a56-36ee-4bac-b4af-939f08e66790 rr:objectMap _:node1gbd87ljkx4 .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd rr:predicateObjectMap km-dev:PredicateObjectMap_b15e1a56-36ee-4bac-b4af-939f08e66790 .
+
+km-dev:PredicateObjectMap_b15e1a56-36ee-4bac-b4af-939f08e66790 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b15e1a56-36ee-4bac-b4af-939f08e66790 .
+
+km-dev:PredicateObjectMap_44ee5b55-bb13-4add-992d-90803c3c054b rr:predicate <http://knowdive.disi.it/KGviz/d/context#end_time> .
+
+_:node1gbd87ljkx5 rr:column "date_end" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap _:node1gbd87ljkx5 .
+
+km-dev:PredicateObjectMap_44ee5b55-bb13-4add-992d-90803c3c054b rr:objectMap _:node1gbd87ljkx5 .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd rr:predicateObjectMap km-dev:PredicateObjectMap_44ee5b55-bb13-4add-992d-90803c3c054b .
+
+km-dev:PredicateObjectMap_44ee5b55-bb13-4add-992d-90803c3c054b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_44ee5b55-bb13-4add-992d-90803c3c054b .
+
+km-dev:PredicateObjectMap_1b5be06d-7801-4538-9da6-3e0cb3047570 rr:predicate <http://knowdive.disi.it/KGviz/rel#c_location> .
+
+km-dev:RefObjectMap_f6ebb088-62b6-450e-801f-e7423c8af6bd a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_21b54dd5-6295-4e10-bc6d-c44378994672 ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap km-dev:RefObjectMap_f6ebb088-62b6-450e-801f-e7423c8af6bd .
+
+km-dev:PredicateObjectMap_1b5be06d-7801-4538-9da6-3e0cb3047570 rr:objectMap km-dev:RefObjectMap_f6ebb088-62b6-450e-801f-e7423c8af6bd .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd rr:predicateObjectMap km-dev:PredicateObjectMap_1b5be06d-7801-4538-9da6-3e0cb3047570 .
+
+km-dev:PredicateObjectMap_1b5be06d-7801-4538-9da6-3e0cb3047570 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1b5be06d-7801-4538-9da6-3e0cb3047570 .
+
+km-dev:PredicateObjectMap_6082540b-e01c-443a-a9ff-bcef1d43bc2b rr:predicate <http://knowdive.disi.it/KGviz/rel#c_me> .
+
+km-dev:RefObjectMap_0fbc96ea-75e2-4546-a8dc-d50d478b7bca a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_fa3e3310-1e97-433b-a6b3-9ec35c39fc55 ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap km-dev:RefObjectMap_0fbc96ea-75e2-4546-a8dc-d50d478b7bca .
+
+km-dev:PredicateObjectMap_6082540b-e01c-443a-a9ff-bcef1d43bc2b rr:objectMap km-dev:RefObjectMap_0fbc96ea-75e2-4546-a8dc-d50d478b7bca .
+
+km-dev:TriplesMap_d636f70a-bac8-47ea-8ac3-df7791fa82fd rr:predicateObjectMap km-dev:PredicateObjectMap_6082540b-e01c-443a-a9ff-bcef1d43bc2b .
+
+km-dev:PredicateObjectMap_6082540b-e01c-443a-a9ff-bcef1d43bc2b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6082540b-e01c-443a-a9ff-bcef1d43bc2b .
+
+km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 a rr:TriplesMap .
+
+_:node1gbd87ljkx1 km-dev:hasTriplesMap km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 .
+
+km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx6 rr:tableName "context_event--xyz.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasLogicalTable _:node1gbd87ljkx6 .
+
+km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 rr:logicalTable _:node1gbd87ljkx6 ;
+	rr:subjectMap _:node1gbd87ljkx7 .
+
+_:node1gbd87ljkx1 km-dev:hasSubjectMap _:node1gbd87ljkx7 .
+
+_:node1gbd87ljkx7 km-dev:isPartOfMapping _:node1gbd87ljkx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.it/KGviz/etype#Event1" ;
+	rr:class <http://knowdive.disi.it/KGviz/etype#Event> ;
+	rr:template "{eventID}" .
+
+km-dev:PredicateObjectMap_6cbba68f-d29b-4e57-8f92-3847b179d282 rr:predicate <http://knowdive.disi.it/KGviz/rel#located> .
+
+km-dev:RefObjectMap_cca3cfd9-398b-4aba-8263-8e11c148c261 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_21b54dd5-6295-4e10-bc6d-c44378994672 ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap km-dev:RefObjectMap_cca3cfd9-398b-4aba-8263-8e11c148c261 .
+
+km-dev:PredicateObjectMap_6cbba68f-d29b-4e57-8f92-3847b179d282 rr:objectMap km-dev:RefObjectMap_cca3cfd9-398b-4aba-8263-8e11c148c261 .
+
+km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 rr:predicateObjectMap km-dev:PredicateObjectMap_6cbba68f-d29b-4e57-8f92-3847b179d282 .
+
+km-dev:PredicateObjectMap_6cbba68f-d29b-4e57-8f92-3847b179d282 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6cbba68f-d29b-4e57-8f92-3847b179d282 .
+
+km-dev:PredicateObjectMap_fb3a97c6-1ccc-418f-a56d-b099c1c4b68b rr:predicate <http://knowdive.disi.it/KGviz/d/event#start_time> .
+
+_:node1gbd87ljkx8 rr:column "date" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap _:node1gbd87ljkx8 .
+
+km-dev:PredicateObjectMap_fb3a97c6-1ccc-418f-a56d-b099c1c4b68b rr:objectMap _:node1gbd87ljkx8 .
+
+km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 rr:predicateObjectMap km-dev:PredicateObjectMap_fb3a97c6-1ccc-418f-a56d-b099c1c4b68b .
+
+km-dev:PredicateObjectMap_fb3a97c6-1ccc-418f-a56d-b099c1c4b68b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_fb3a97c6-1ccc-418f-a56d-b099c1c4b68b .
+
+km-dev:PredicateObjectMap_00ac26a1-16fe-41f9-8e19-fcb5cc01b0bd rr:predicate <http://knowdive.disi.it/KGviz/d/event#end_time> .
+
+_:node1gbd87ljkx9 rr:column "date_end" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap _:node1gbd87ljkx9 .
+
+km-dev:PredicateObjectMap_00ac26a1-16fe-41f9-8e19-fcb5cc01b0bd rr:objectMap _:node1gbd87ljkx9 .
+
+km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 rr:predicateObjectMap km-dev:PredicateObjectMap_00ac26a1-16fe-41f9-8e19-fcb5cc01b0bd .
+
+km-dev:PredicateObjectMap_00ac26a1-16fe-41f9-8e19-fcb5cc01b0bd a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_00ac26a1-16fe-41f9-8e19-fcb5cc01b0bd .
+
+km-dev:PredicateObjectMap_6d8655ea-f9c8-4868-bc5a-dc436f577eaa rr:predicate <http://knowdive.disi.it/KGviz/d/event#activity> .
+
+_:node1gbd87ljkx10 rr:column "what" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap _:node1gbd87ljkx10 .
+
+km-dev:PredicateObjectMap_6d8655ea-f9c8-4868-bc5a-dc436f577eaa rr:objectMap _:node1gbd87ljkx10 .
+
+km-dev:TriplesMap_e7cf66ca-7197-4ebb-b887-b2bf504aa0a0 rr:predicateObjectMap km-dev:PredicateObjectMap_6d8655ea-f9c8-4868-bc5a-dc436f577eaa .
+
+km-dev:PredicateObjectMap_6d8655ea-f9c8-4868-bc5a-dc436f577eaa a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6d8655ea-f9c8-4868-bc5a-dc436f577eaa .
+
+km-dev:TriplesMap_aa7f7f61-4ad5-4995-8b40-d5f3914d0535 a rr:TriplesMap .
+
+_:node1gbd87ljkx1 km-dev:hasTriplesMap km-dev:TriplesMap_aa7f7f61-4ad5-4995-8b40-d5f3914d0535 .
+
+km-dev:TriplesMap_aa7f7f61-4ad5-4995-8b40-d5f3914d0535 km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx11 rr:tableName "context_event--xyz.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasLogicalTable _:node1gbd87ljkx11 .
+
+km-dev:TriplesMap_aa7f7f61-4ad5-4995-8b40-d5f3914d0535 rr:logicalTable _:node1gbd87ljkx11 ;
+	rr:subjectMap _:node1gbd87ljkx12 .
+
+_:node1gbd87ljkx1 km-dev:hasSubjectMap _:node1gbd87ljkx12 .
+
+_:node1gbd87ljkx12 km-dev:isPartOfMapping _:node1gbd87ljkx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.it/KGviz/etype#HumanState1" ;
+	rr:class <http://knowdive.disi.it/KGviz/etype#HumanState> ;
+	rr:template "{moodID}" .
+
+km-dev:PredicateObjectMap_b4e51321-69ed-425d-a0eb-8492ec0a18a6 rr:predicate <http://knowdive.disi.it/KGviz/rel#of_human> .
+
+km-dev:RefObjectMap_e0470fd3-af42-4723-885f-db5f6a16ee5e a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_fa3e3310-1e97-433b-a6b3-9ec35c39fc55 ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap km-dev:RefObjectMap_e0470fd3-af42-4723-885f-db5f6a16ee5e .
+
+km-dev:PredicateObjectMap_b4e51321-69ed-425d-a0eb-8492ec0a18a6 rr:objectMap km-dev:RefObjectMap_e0470fd3-af42-4723-885f-db5f6a16ee5e .
+
+km-dev:TriplesMap_aa7f7f61-4ad5-4995-8b40-d5f3914d0535 rr:predicateObjectMap km-dev:PredicateObjectMap_b4e51321-69ed-425d-a0eb-8492ec0a18a6 .
+
+km-dev:PredicateObjectMap_b4e51321-69ed-425d-a0eb-8492ec0a18a6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b4e51321-69ed-425d-a0eb-8492ec0a18a6 .
+
+km-dev:PredicateObjectMap_28dd3a5d-0cc9-47e3-b50c-b2c29b70defc rr:predicate <http://knowdive.disi.it/KGviz/d/state#degree> .
+
+_:node1gbd87ljkx13 rr:column "mood" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasObjectMap _:node1gbd87ljkx13 .
+
+km-dev:PredicateObjectMap_28dd3a5d-0cc9-47e3-b50c-b2c29b70defc rr:objectMap _:node1gbd87ljkx13 .
+
+km-dev:TriplesMap_aa7f7f61-4ad5-4995-8b40-d5f3914d0535 rr:predicateObjectMap km-dev:PredicateObjectMap_28dd3a5d-0cc9-47e3-b50c-b2c29b70defc .
+
+km-dev:PredicateObjectMap_28dd3a5d-0cc9-47e3-b50c-b2c29b70defc a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_28dd3a5d-0cc9-47e3-b50c-b2c29b70defc .
+
+km-dev:TriplesMap_21b54dd5-6295-4e10-bc6d-c44378994672 a rr:TriplesMap .
+
+_:node1gbd87ljkx1 km-dev:hasTriplesMap km-dev:TriplesMap_21b54dd5-6295-4e10-bc6d-c44378994672 .
+
+km-dev:TriplesMap_21b54dd5-6295-4e10-bc6d-c44378994672 km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx14 rr:tableName "context_event--xyz.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasLogicalTable _:node1gbd87ljkx14 .
+
+km-dev:TriplesMap_21b54dd5-6295-4e10-bc6d-c44378994672 rr:logicalTable _:node1gbd87ljkx14 ;
+	rr:subjectMap _:node1gbd87ljkx15 .
+
+_:node1gbd87ljkx1 km-dev:hasSubjectMap _:node1gbd87ljkx15 .
+
+_:node1gbd87ljkx15 km-dev:isPartOfMapping _:node1gbd87ljkx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.it/KGviz/etype#Location1" ;
+	rr:class <http://knowdive.disi.it/KGviz/etype#Location> ;
+	rr:template "{locationID}" .
+
+km-dev:TriplesMap_fa3e3310-1e97-433b-a6b3-9ec35c39fc55 a rr:TriplesMap .
+
+_:node1gbd87ljkx1 km-dev:hasTriplesMap km-dev:TriplesMap_fa3e3310-1e97-433b-a6b3-9ec35c39fc55 .
+
+km-dev:TriplesMap_fa3e3310-1e97-433b-a6b3-9ec35c39fc55 km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx16 rr:tableName "context_event--xyz.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1gbd87ljkx1 .
+
+_:node1gbd87ljkx1 km-dev:hasLogicalTable _:node1gbd87ljkx16 .
+
+km-dev:TriplesMap_fa3e3310-1e97-433b-a6b3-9ec35c39fc55 rr:logicalTable _:node1gbd87ljkx16 ;
+	rr:subjectMap _:node1gbd87ljkx17 .
+
+_:node1gbd87ljkx1 km-dev:hasSubjectMap _:node1gbd87ljkx17 .
+
+_:node1gbd87ljkx17 km-dev:isPartOfMapping _:node1gbd87ljkx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.it/KGviz/etype#Me1" ;
+	rr:class <http://knowdive.disi.it/KGviz/etype#Me> ;
+	rr:template "{userid}" .

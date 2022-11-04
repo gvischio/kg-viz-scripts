@@ -1,0 +1,763 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix etype: <http://knowdive.disi.unitn.it/etype#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix karma: <http://isi.edu/integration/karma/ontologies/model/current#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1g7h31soqx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "locations.csv" ;
+	km-dev:modelPublicationTime "1657357267738"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"altitude\"}],[{\"columnName\":\"longitude\"}],[{\"columnName\":\"label\"}],[{\"columnName\":\"locationID\"}],[{\"columnName\":\"category\"}],[{\"columnName\":\"latitude\"}],[{\"columnName\":\"region\"}],[{\"columnName\":\"city\"}],[{\"columnName\":\"suburb\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"altitude\"}],[{\"columnName\":\"longitude\"}],[{\"columnName\":\"label\"}],[{\"columnName\":\"locationID\"}],[{\"columnName\":\"category\"}],[{\"columnName\":\"latitude\"}],[{\"columnName\":\"region\"}],[{\"columnName\":\"city\"}],[{\"columnName\":\"suburb\"}]]" ;
+	km-dev:hasModelLabel "locations.csv" ;
+	km-dev:hasBaseURI "http://kg-viz/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"properties\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://kg-viz/\",
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"locationID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Location\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.it/KGviz/etype#Location1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"locationID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"locationID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"label\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#label\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"label\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"label\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"category\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#category\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"category\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"category\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"suburb\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#suburb\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"suburb\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"suburb\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"city\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#city\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"city\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"city\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"region\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#region\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"region\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"region\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"latitude\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#latitude\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"latitude\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"latitude\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"longitude\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#longitude\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"longitude\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"longitude\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"altitude\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.it/KGviz/etype#Location\",
+                    \"DomainId\": \"http://knowdive.disi.it/KGviz/etype#Location1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.it/KGviz/d/location#altitude\",
+                    \"DomainLabel\": \"http://knowdive.disi.it/KGviz/etype#Location/Location1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"altitude\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"altitude\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    }
+]""" .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 a rr:TriplesMap .
+
+_:node1g7h31soqx1 km-dev:hasTriplesMap km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx2 rr:tableName "locations.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasLogicalTable _:node1g7h31soqx2 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:logicalTable _:node1g7h31soqx2 ;
+	rr:subjectMap _:node1g7h31soqx3 .
+
+_:node1g7h31soqx1 km-dev:hasSubjectMap _:node1g7h31soqx3 .
+
+_:node1g7h31soqx3 km-dev:isPartOfMapping _:node1g7h31soqx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.it/KGviz/etype#Location1" ;
+	rr:class <http://knowdive.disi.it/KGviz/etype#Location> ;
+	rr:template "{locationID}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_5788050b-99c0-4663-bc5a-24b469bfcbe2 rr:predicate <http://knowdive.disi.it/KGviz/d/location#altitude> .
+
+_:node1g7h31soqx4 rr:column "altitude" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx4 .
+
+km-dev:PredicateObjectMap_5788050b-99c0-4663-bc5a-24b469bfcbe2 rr:objectMap _:node1g7h31soqx4 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_5788050b-99c0-4663-bc5a-24b469bfcbe2 .
+
+km-dev:PredicateObjectMap_5788050b-99c0-4663-bc5a-24b469bfcbe2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_5788050b-99c0-4663-bc5a-24b469bfcbe2 .
+
+km-dev:PredicateObjectMap_bf586a2b-a4fa-4659-a7b7-87dabff8a906 rr:predicate <http://knowdive.disi.it/KGviz/d/location#longitude> .
+
+_:node1g7h31soqx5 rr:column "longitude" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx5 .
+
+km-dev:PredicateObjectMap_bf586a2b-a4fa-4659-a7b7-87dabff8a906 rr:objectMap _:node1g7h31soqx5 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_bf586a2b-a4fa-4659-a7b7-87dabff8a906 .
+
+km-dev:PredicateObjectMap_bf586a2b-a4fa-4659-a7b7-87dabff8a906 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_bf586a2b-a4fa-4659-a7b7-87dabff8a906 .
+
+km-dev:PredicateObjectMap_3511a348-fe96-4daf-ba05-af8aba5820a4 rr:predicate <http://knowdive.disi.it/KGviz/d/location#label> .
+
+_:node1g7h31soqx6 rr:column "label" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx6 .
+
+km-dev:PredicateObjectMap_3511a348-fe96-4daf-ba05-af8aba5820a4 rr:objectMap _:node1g7h31soqx6 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_3511a348-fe96-4daf-ba05-af8aba5820a4 .
+
+km-dev:PredicateObjectMap_3511a348-fe96-4daf-ba05-af8aba5820a4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3511a348-fe96-4daf-ba05-af8aba5820a4 .
+
+km-dev:PredicateObjectMap_6f726dd7-8222-474e-b8ff-714e9d0b0233 rr:predicate <http://knowdive.disi.it/KGviz/d/location#category> .
+
+_:node1g7h31soqx7 rr:column "category" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx7 .
+
+km-dev:PredicateObjectMap_6f726dd7-8222-474e-b8ff-714e9d0b0233 rr:objectMap _:node1g7h31soqx7 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_6f726dd7-8222-474e-b8ff-714e9d0b0233 .
+
+km-dev:PredicateObjectMap_6f726dd7-8222-474e-b8ff-714e9d0b0233 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6f726dd7-8222-474e-b8ff-714e9d0b0233 .
+
+km-dev:PredicateObjectMap_f1243e02-7bc8-4707-8501-edaa8b6328b1 rr:predicate <http://knowdive.disi.it/KGviz/d/location#latitude> .
+
+_:node1g7h31soqx8 rr:column "latitude" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx8 .
+
+km-dev:PredicateObjectMap_f1243e02-7bc8-4707-8501-edaa8b6328b1 rr:objectMap _:node1g7h31soqx8 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_f1243e02-7bc8-4707-8501-edaa8b6328b1 .
+
+km-dev:PredicateObjectMap_f1243e02-7bc8-4707-8501-edaa8b6328b1 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f1243e02-7bc8-4707-8501-edaa8b6328b1 .
+
+km-dev:PredicateObjectMap_b95fa6d0-dc71-4ff2-8bd0-68388124b1da rr:predicate <http://knowdive.disi.it/KGviz/d/location#region> .
+
+_:node1g7h31soqx9 rr:column "region" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx9 .
+
+km-dev:PredicateObjectMap_b95fa6d0-dc71-4ff2-8bd0-68388124b1da rr:objectMap _:node1g7h31soqx9 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_b95fa6d0-dc71-4ff2-8bd0-68388124b1da .
+
+km-dev:PredicateObjectMap_b95fa6d0-dc71-4ff2-8bd0-68388124b1da a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b95fa6d0-dc71-4ff2-8bd0-68388124b1da .
+
+km-dev:PredicateObjectMap_69c56880-7b96-4292-a68c-2453d9e55b46 rr:predicate <http://knowdive.disi.it/KGviz/d/location#city> .
+
+_:node1g7h31soqx10 rr:column "city" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx10 .
+
+km-dev:PredicateObjectMap_69c56880-7b96-4292-a68c-2453d9e55b46 rr:objectMap _:node1g7h31soqx10 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_69c56880-7b96-4292-a68c-2453d9e55b46 .
+
+km-dev:PredicateObjectMap_69c56880-7b96-4292-a68c-2453d9e55b46 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_69c56880-7b96-4292-a68c-2453d9e55b46 .
+
+km-dev:PredicateObjectMap_1583e6ab-3d28-40f0-b184-14a631a25e6b rr:predicate <http://knowdive.disi.it/KGviz/d/location#suburb> .
+
+_:node1g7h31soqx11 rr:column "suburb" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasObjectMap _:node1g7h31soqx11 .
+
+km-dev:PredicateObjectMap_1583e6ab-3d28-40f0-b184-14a631a25e6b rr:objectMap _:node1g7h31soqx11 .
+
+km-dev:TriplesMap_d2714012-a304-4edb-adb4-1ffe5bc5d025 rr:predicateObjectMap km-dev:PredicateObjectMap_1583e6ab-3d28-40f0-b184-14a631a25e6b .
+
+km-dev:PredicateObjectMap_1583e6ab-3d28-40f0-b184-14a631a25e6b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1g7h31soqx1 .
+
+_:node1g7h31soqx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1583e6ab-3d28-40f0-b184-14a631a25e6b .
